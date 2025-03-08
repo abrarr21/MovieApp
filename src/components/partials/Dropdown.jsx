@@ -6,11 +6,11 @@ const Dropdown = ({ title, options, func }) => {
           {title}
         </option>
 
-        {options.map((o, i) => {
+        {options.map((o, i) => (
           <option key={i} value={o}>
             {o.toUpperCase()}
-          </option>;
-        })}
+          </option>
+        ))}
       </select>
     </div>
   );

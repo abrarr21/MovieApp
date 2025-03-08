@@ -21,7 +21,7 @@
 }
 
 select {
-  -webkit-appearance: name;
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: 0;

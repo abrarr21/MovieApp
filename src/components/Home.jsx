@@ -13,7 +13,7 @@ const Home = () => {
 
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState(null);
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("all");
 
   const getWallpaper = async () => {
     try {
@@ -54,7 +54,7 @@ const Home = () => {
           <h1 className="text-3xl font-bold text-zinc-400">Trending</h1>
           <Dropdown
             title="Filter"
-            options={["Movie", "Tv", "All"]}
+            options={["movie", "tv", "all"]}
             func={(e) => setCategory(e.target.value)}
           />
         </div>
