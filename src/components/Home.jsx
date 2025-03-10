@@ -42,7 +42,7 @@ const Home = () => {
     !wallpaper && getWallpaper();
     getTreding();
   }, [category]);
-  console.log(trending);
+  // console.log(trending);
 
   return wallpaper && trending ? (
     <>
