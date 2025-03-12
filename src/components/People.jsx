@@ -68,7 +68,7 @@ const People = () => {
         hasMore={hasmore}
         next={getPeople}
       >
-        <Cards data={people} title={category} />
+        <Cards data={people} title="person" />
       </InfiniteScroll>
     </div>
   ) : (

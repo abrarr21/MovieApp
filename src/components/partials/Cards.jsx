@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 
 const Cards = ({ data, title }) => {
+  // console.log(title);
   return (
     <div className="flex flex-wrap w-full h-full px-[5%] bg-[#1F1E24]">
       {data.map((card, index) => (
-        <Link key={index} className="relative w-[25vh] mr-[5%] mb-[5%]">
+        <Link
+          to={`/${card.media_type || title}/details/${card.id}`}
+          key={index}
+          className="relative w-[25vh] mr-[5%] mb-[5%]"
+        >
           <img
             className="h-[40vh] object-cover shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)]"
             src={`https://image.tmdb.org/t/p/original/${card.poster_path || card.backdrop_path || card.profile_path}`}

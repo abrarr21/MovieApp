@@ -5,7 +5,11 @@ import Popular from "./components/Popular";
 import Movie from "./components/Movie";
 import Tvshows from "./components/Tvshows";
 import People from "./components/People";
-import Loading2 from "./components/Loading2";
+import PersonDetails from "./components/PersonDetails";
+import TvDetails from "./components/TvDetails";
+import MovieDetails from "./components/MovieDetails";
+import Trailer from "./components/partials/Trailer";
+import NotFound404 from "./components/NotFound404";
 
 function App() {
   return (
@@ -16,8 +20,17 @@ function App() {
           <Route path="/trending" element={<Trending />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/movie" element={<Movie />} />
+          <Route path="/movie/details/:id" element={<MovieDetails />}>
+            <Route path="/movie/details/:id/trailer" element={<Trailer />} />
+          </Route>
+
           <Route path="/tvshows" element={<Tvshows />} />
-          <Route path="/people" element={<People />} />
+          <Route path="/tv/details/:id" element={<TvDetails />}>
+            <Route path="/tv/details/:id/trailer" element={<Trailer />} />
+          </Route>
+          <Route path="/person" element={<People />} />
+          <Route path="/person/details/:id" element={<PersonDetails />} />
+          <Route path="*" element={<NotFound404 />} />
         </Routes>
       </div>
     </>
